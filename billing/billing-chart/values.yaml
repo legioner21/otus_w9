@@ -1,0 +1,23 @@
+replicaCount: 1
+
+image:
+  repository: legioner4/otis-work-billing:9.1
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+
+ingress:
+  className: "nginx"
+  appDomain: "otus.homework.billing"
+
+
+postgresql:
+  postgresqlUsername: postgres
+  postgresqlPassword: otuspswd
+  postgresqlDatabase: otus_db
+  postgresqlHost: otus-postgresql.default.svc.cluster.local
+  service:
+    port: "5433"

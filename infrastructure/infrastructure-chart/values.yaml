@@ -1,0 +1,16 @@
+global:
+  postgresql:
+    auth:
+      postgresPassword: "otuspswd"
+      username: "postgres"
+      password: "otuspswd"
+      database: "otus_db"
+    service:
+      ports:
+        postgresql: 5433
+
+rabbitmq:
+  auth:
+    username: "admin"
+    password: "admin"
+    erlangCookie: "secretcookie"
